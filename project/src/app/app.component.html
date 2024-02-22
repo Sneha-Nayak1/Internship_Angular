@@ -1,0 +1,112 @@
+<h1 class="main">My {{title}}</h1>
+
+<button (click)="toggle()">Toggle</button>
+<h1 *ngIf="display">Toggle Button</h1>
+
+
+<!-- <h1>Basic form</h1>
+<form #basic="ngForm" (submit)="submit(basic.value)">
+    <input type="text" ngModel name="user" placeholder="Enter user name"/>
+    <br/><br/>
+    <input type="text"  ngModel name="email" placeholder="Enter user email"/>
+    <br/><br/>
+    <input type="text" ngModel name="password" placeholder="Enter user password"/>
+    <br/><br/>
+    <button>Register</button>
+</form>
+ -->
+
+
+<!--<h1>Header component</h1> 
+<app-header></app-header> -->
+
+<!-- <h1>Style binding</h1>
+<h1 [style.color]="color" [style.backgroundColor]="bg">Sneha</h1>
+<button (click)="update()">clickkkk</button>-->
+
+
+
+<!-- <h1>Nested Loop</h1>
+<ul *ngFor="let data of details">
+<li>{{data.name}}</li>
+<li>{{data.age}}</li>
+<li>{{data.phone}}</li>
+   <ul *ngFor="let dataa of data.color">
+    <li>{{dataa}}</li>
+    </ul>
+</ul> -->
+
+
+<!-- <h1>For loop</h1>
+<h2 *ngFor="let data of names">Name is: {{data}}</h2>
+<h2 *ngFor="let data of details">Details is :{{data.name}} and  {{data.age}}  and  {{data.phone}} </h2>
+ -->
+<!-- <h1>switch</h1>
+<input type="text" #box1 (input)="getFruits(box1.value)"/>
+ <div [ngSwitch]="fruits">
+    <h1 *ngSwitchCase="'apple'">Apple</h1>
+    <h1 *ngSwitchCase="'orange'">orange</h1>
+    <h1 *ngSwitchCase="'grapes'">grapes</h1>
+    <h1 *ngSwitchDefault>Dont Know</h1>
+</div> -->
+
+
+<!-- <h1>Multiple/Else if condition</h1>
+<ng-template [ngIf]="fruits==='apple'">
+    <p>Apple</p>
+</ng-template>
+<ng-template [ngIf]="fruits==='orange'">
+    <p>Orange</p>
+</ng-template>
+
+<ng-template [ngIf]="fruits==='mango'">
+    <p>Mango</p>
+</ng-template>
+
+<ng-template [ngIf]="fruits==='apple'">
+    <p>Banana</p>
+</ng-template>
+ -->
+
+<!-- <h1 *ngIf="show;then box1 else box2"></h1>
+<ng-template #box1><p>crect</p></ng-template>
+<ng-template #box2><p>wrong</p></ng-template>
+<button (click)="getClick(true)">Click me!</button>
+ -->
+
+<!-- <h1>If else condition</h1>
+<h1 *ngIf="bool==='yes';then box1 else box2">
+    
+</h1>
+<ng-template #box1>
+    <p>snehaha</p>
+</ng-template>
+<ng-template #box2><p>rrrrr</p></ng-template> -->
+
+
+<!-- <h1>Property binding</h1>
+<input type="text" value="{{name}}"/>
+<input type="text" [value]="name" [disabled]="disable"/> -->
+
+<!-- <app-login></app-login> -->
+
+<!-- <h1>GET TEXT BOX VALUE</h1>
+<input type="text" #box1 placeholder="Enter data" (input)="getData(box1.value)"/>
+<input type="text" #box2>
+<button (click)="getData(box2.value)">click me</button>
+<p>The value is {{display}}</p> -->
+
+
+
+<!-- <button (click)="getData('button click event')">Click Me!</button><br/>
+<input type="text"  #box1 placeholder="keyup box" (keyup)="getData(box1.value)"/><br/>
+<input type="text" #box2 placeholder="keydown" (keydown)="getData(box2.value)"/>
+<input type="text" #box3 placeholder="blur" (blur)="getData(box3.value)"/>
+<input type="text" #box2 placeholder="keydown" (keydown)="getData(box2.value)"/>
+<h2 (mouseover)="getData('sneha')">infomatics</h2>
+<h2 (mouseover)="getData('sss')">{{title}}</h2>
+<h3 (mouseleave)="getData('ggg')">instgram</h3> -->
+ <!--<button (click)="getName('sneha')">Click me!</button>-->
+<!--<app-login></app-login>-->
+
+<router-outlet></router-outlet>
