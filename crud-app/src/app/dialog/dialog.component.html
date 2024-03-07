@@ -3,7 +3,7 @@
     <form [formGroup]="productForm">
         <mat-form-field appearance="outline">
             <mat-label>Product Name</mat-label>
-            <input formControlName="productname" matInput placeholder="Name">
+            <input formControlName="productName" matInput placeholder="Name">
            
           </mat-form-field>
          
@@ -12,7 +12,7 @@
                 <mat-select formControlName="category" placeholder="Select the Category">
                 <mat-option value="Fruits">Fruits</mat-option>
                 <mat-option value="Vegetables">Vegetables</mat-option>
-                <mat-option value="Grocery">Grocery</mat-option>
+                <mat-option value="Chocolate">Chocolate</mat-option>
             </mat-select> 
               </mat-form-field>  
     
@@ -23,7 +23,7 @@
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field> 
     
-              <label for=""><h3>Product Freshness</h3></label>
+              <label for=""><h3>Product From</h3></label>
               <mat-radio-group formControlName="freshness" class="example-radio-group">
                 <mat-radio-button  class="example-radio-button" *ngFor="let data of List" [value]="data">
                     {{data}}

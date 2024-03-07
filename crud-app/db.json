@@ -1,15 +1,6 @@
 {
   "productList": [
     {
-      "productname": "Carrot",
-      "category": "Fruits",
-      "freshness": "Second Hand",
-      "price": 50,
-      "comment": "Imported",
-      "date": "2024-02-22T18:30:00.000Z",
-      "id": 2
-    },
-    {
       "productname": "papaya",
       "category": "Fruits",
       "freshness": "Brand New",
@@ -17,6 +8,24 @@
       "comment": "organic",
       "date": "2024-02-27T18:30:00.000Z",
       "id": 4
+    },
+    {
+      "productname": "Carrot",
+      "category": "Vegetables",
+      "freshness": "Refreshed",
+      "price": 150,
+      "comment": "good one",
+      "date": "2024-03-03T18:30:00.000Z",
+      "id": 5
+    },
+    {
+      "productname": "mango",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 120,
+      "comment": "good",
+      "date": "2024-03-05T18:30:00.000Z",
+      "id": 6
     }
   ],
   "comments": [

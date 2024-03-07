@@ -10,11 +10,7 @@ import {NgForm} from '@angular/forms';
 
 
 export class AppComponent {
-  title = 'Project';
-  display=true;
-  toggle(){
-    this.display=!this.display;
-  }
+  
 
 
 

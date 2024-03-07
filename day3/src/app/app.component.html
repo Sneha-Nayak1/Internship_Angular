@@ -1,0 +1,74 @@
+<h1>{{title}}</h1>
+<h1>Template driven forms</h1>
+<form #login="ngForm" (ngSubmit)="loginUser(login.value)">
+  <input  ngModel type="text" name="name" placeholder="Enter your name:"/>
+  <br><br>
+  <input ngModel type="password" name="password" placeholder="Enter the password"/>
+  <br><br>
+  <button>Login</button>
+</form>
+
+
+<h1>Custom pipe</h1>
+<h2>{{3 | usdInr: 2:4}}</h2>
+
+<h1>Advanced pipes</h1>
+<h2>{{pipe | slice:1:3}}</h2>
+<h2>{{user1 | json}}</h2>
+<h2>{{0303.1111| number:'2.3-4'}}</h2>
+
+<h1>Pipes</h1>
+<h2>{{pipe | uppercase}}</h2>
+<h2>{{pipe | lowercase}}</h2>
+<h2>{{today | date:'fullDate'}}</h2>
+
+
+<h1>Basics of TS</h1>
+<h2>{{data3}}</h2>
+
+<h1>Two way binding</h1>
+<input type="text" [(ngModel)]="data2"/>
+<h2>{{data2}}</h2>
+
+<h1>Send data from child to parent component</h1>
+<h3>{{data1}}</h3>
+<app-child (data)="updateData($event)"> </app-child>
+
+<h1>Reusable components</h1>
+<ul *ngFor="let data of user">
+ <!-- <app-child [item1]='data'></app-child> -->
+</ul>
+
+
+<h1>send data parent to child component</h1>
+<!-- <app-child [item]="data"></app-child> -->
+<button (click)="update()">Update the number</button>
+
+<h1>TO do list</h1>
+<input type="text" placeholder="Enter new task" #task>
+<br/><br/>
+<button (click)="addTask(task.value)">Add new task</button>
+<br/><br/>
+<ul *ngFor="let data of tasks">
+  <li>{{data.name}} <button (click)="remove(data.id)">Remove tasks</button></li>
+</ul>
+
+<h1>Material UI</h1>
+<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+<br/>
+<br/>
+
+<div class="example-button-row">
+    <button mat-raised-button>Basic</button>
+    <button mat-raised-button color="primary">Button1</button>
+    <button mat-stroked-button color="accent">Button2</button>
+    <button mat-stroked-button color="warn">Button3</button>
+    <button mat-stroked-button disabled>Disabled</button>
+    <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+
+
+<h1 *ngIf="display">Toggle Button</h1>
+<button (click)="toggle()">Toggle</button>
+
+<router-outlet></router-outlet>

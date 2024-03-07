@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   title = 'crud-app';
  
 
-  displayedColumns: string[] = ['productname', 'category', 'freshness', 'price', 'comment', "date", "action"];
+  displayedColumns: string[] = ['productName', 'category', 'freshness', 'price', 'comment', "date", "action"];
   dataSource !: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator !: MatPaginator;
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
         this.dataSource.sort=this.sort;
       },
       error: ()=>{
-        alert("Error in fetching the data")
+        alert("Error in fetching the data");
       }
     
   })
@@ -57,6 +57,7 @@ export class AppComponent implements OnInit {
 editProduct(row:any){
   this.dialog.open(DialogComponent,{
     width:'30%',
+    height:'90%',
     data:row,
 
   }).afterClosed().subscribe(val=>{
@@ -68,17 +69,31 @@ editProduct(row:any){
 }
 
 
-deleteProduct(id:number){
+deleteProduct(id:any){
+  console.log('Deleting product with id:', id);
   this.api.deleteProduct(id).subscribe({
     next: res=>{
+    
       alert("product deleted successfully");
       this.getAllProducts();
     },
     error: ()=>{
-      alert("error while deleting error");
+      alert("error while deleting");
     }
   })
 }
+
+
+// deleteProduct(id:any){
+//   this.api.deleteProduct(id).subscribe((res:any) => {
+//     if(res){
+//       console.log(res);
+//       this.getAllProducts();
+//     }
+//   })
+
+
+// }
 applyFilter(event: Event) {
   const filterValue = (event.target as HTMLInputElement).value;
   this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -87,6 +102,8 @@ applyFilter(event: Event) {
     this.dataSource.paginator.firstPage();
   }
 } 
+
+
 editData(row:any){
   this.dialog.open(DialogComponent, {
     width:"30%",

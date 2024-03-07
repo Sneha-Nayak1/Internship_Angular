@@ -1,0 +1,61 @@
+<h1>{{title}}</h1>
+<h1>hooks-onchange</h1>
+<app-hooks></app-hooks>
+
+
+
+<h1>Lazy loading</h1>
+<h2>admin-lazy</h2>
+<ul>
+    <li><a routerLink="admin/login">LOGIN</a></li>
+    <li><a routerLink="admin/register">REGISTER</a></li>
+</ul>
+<h2>user-lazy</h2>
+<ul>
+    <li><a routerLink="user/login">LOGIN</a></li>
+    <li><a routerLink="user/register">REGISTER</a></li>
+</ul>
+
+
+
+
+<!-- <h1>Grouping router</h1>
+<h3>Admin page</h3>
+<ul>
+    <li><a routerLink="admin/login">LOGIN</a></li>
+    <li><a routerLink="admin/register">REGISTER</a></li>
+</ul>
+
+<h3>User page</h3>
+<ul>
+    <li><a routerLink="user/login">LOGIN</a></li>
+    <li><a routerLink="user/register">REGISTER</a></li>
+</ul>
+
+<router-outlet></router-outlet> -->
+
+
+<!-- <h1>Routing Module</h1>
+<ul>
+    <li><a routerLink="login">LOGIN</a></li>
+    <li><a routerLink="register">REGISTER</a></li>
+</ul>
+<router-outlet></router-outlet> -->
+
+
+<h1>API Post method</h1>
+<form #login="ngForm" (ngSubmit)="getData(login.value)">
+    <input type="text" ngModel name="name" placeholder="Enter name">
+    <br><br>
+    <input type="text" ngModel name="age" placeholder="Enter age">
+    <br><br>
+    <button>Register</button>
+</form>
+
+<h1>Call API in angular</h1>
+<ul>
+    <li *ngFor="let data1 of info">
+        {{data1.name}}
+    </li>
+</ul>
+<!-- <router-outlet></router-outlet> -->

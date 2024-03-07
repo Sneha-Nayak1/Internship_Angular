@@ -4,22 +4,24 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
+  private baseUrl = 'http://localhost:8086/api/products';
 
   constructor(private http: HttpClient) { }
 
   getProduct(){
-    return this.http.get<any>("http://localhost:3000/productList/");
+    return this.http.get<any>(`${this.baseUrl}`);
   }
   postProduct(data: any)
 {
-  return this.http.post<any>("http://localhost:3000/productList/",data);
+  return this.http.post<any>(`${this.baseUrl}`,data);
 }
 putProduct(data:any,id:number){
-  return this.http.put<any>("http://localhost:3000/productList/"+id, data);
+  return this.http.post<any>(`${this.baseUrl}/${id}`, data);
 }
 
-deleteProduct(id:number){
-    return this.http.delete<any>("http://localhost:3000/productList/"+id);
+deleteProduct(id:any){
+  console.log('Deleting product with id in service:', id);
+    return this.http.get(`${this.baseUrl}/${id}`);
 }
 }
 

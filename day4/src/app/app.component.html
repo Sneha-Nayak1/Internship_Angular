@@ -1,0 +1,72 @@
+<h1>{{title}}</h1>
+<h1>Service</h1>
+<ul>
+  <li *ngFor="let data of data3">
+    {{data.name}}
+  </li>
+</ul>
+<app-footer></app-footer>
+
+
+<h1>Child routing</h1>
+<a routerLink="">Component1</a><br>
+<a routerLink="c2">Component2</a><br>
+<a routerLink="c3">Component3</a>
+<router-outlet></router-outlet>
+
+<h1>Dynamic routing</h1>
+<!-- <a routerLink="">Component1</a><br>
+<a routerLink="c2">Component2</a><br>
+<a routerLink="c3">Component3</a><br>
+
+<a routerLink="c3/10">Home</a><br>
+<a routerLink="c3/20">User</a><br>
+<a routerLink="c3/30">Register</a><br>
+<a routerLink="123">Not valid</a><br>
+
+<a routerLink="c3/30/sneha">Login</a><br>
+<router-outlet></router-outlet>
+ -->
+
+<h1>Basics of routing</h1>
+<!--<p routerLink="">Component1</p><br>
+<a routerLink="c2">Component2</a><br>
+<a routerLink="c3">Component3</a><br>
+<router-outlet></router-outlet> -->
+
+<h1>Directives</h1>
+<h2 appRedColor>Sneha nayak</h2>
+<p appRedColor>Canara Bank</p>
+
+
+<h1>Reactive form validation</h1>
+<form [formGroup]="register" (ngSubmit)="loginUser2()">
+  <input type="text" placeholder="NAME" formControlName="name1">
+  <br><br>
+  <span style="color:red" *ngIf="username && username.invalid && username.touched">Invalid</span><br><br>
+  <input type="password" placeholder="PASSWORD" formControlName="pass1"><br><br>
+  <span style="color:red" *ngIf="pass1 && pass1.invalid && pass1.touched">Invalid</span>
+  <button [disabled]="register.invalid">Submit</button>
+</form>
+
+
+<h1>Reactive form in angular</h1>
+<form [formGroup]="login" (ngSubmit)="loginUser1()">
+  <input type="text" placeholder="ENTER NAME" formControlName="name"><br><br>
+  <input type="password" placeholder="ENTER pass" formControlName="pass" ><br><br>
+  <button>Login</button>
+</form>
+
+
+<h1>Template driven form validation</h1>
+<!-- <form #login="ngForm" (ngSubmit)="loginUser(login.value)">
+  <input type="text" required #box1="ngModel" ngModel name="name" pattern="[a-zA-Z]+[0-9]?[.][a-zA-Z]*$" placeholder="Enter ur name"/><br><br>
+  <span *ngIf="box1.invalid && box1.touched" style="color: red">Please enter a valid input</span><br><br>
+  <input type="email" required #box3="ngModel" ngModel name="email" email placeholder="Enter ur mail"/><br><br>
+  <span *ngIf="box3.invalid && box3.touched" style="color: red">Please enter a valid mail</span><br><br>
+  <input ngModel type="password" required #box2="ngModel" name="password" minlength="2" placeholder="Enter password"/><br><br>
+  <span *ngIf="box2.invalid && box2.touched" style="color:red">Please enter a valid passsword</span><br><br>
+  <button [disabled]="login.invalid">Login</button><br><br>
+</form> -->
+
+

@@ -12,8 +12,8 @@ export class DialogComponent implements OnInit {
 
   actionBtn:string='Save';
 
-  List=['Brand New', 'Second Hand', 'Refreshed'];
-  productForm ! :FormGroup;
+  List=['India', 'Asia', 'South Africa'];
+  productForm !:FormGroup;
   constructor(private formBuilder:FormBuilder, private api:ApiService,
     @Inject(MAT_DIALOG_DATA) public editData:any,
     private dialogRef:MatDialogRef<DialogComponent>) { }
@@ -22,18 +22,19 @@ export class DialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.productForm=this.formBuilder.group({
-      productname:['',Validators.required],
+      productName:['',Validators.required],
       category:['',Validators.required],
       freshness:['',Validators.required],
       price:['',Validators.required],
       comment:['',Validators.required],
+
       date:['',Validators.required]
 
     })
 
     if(this.editData){
       this.actionBtn='Update';
-      this.productForm.controls['productname'].setValue(this.editData.productname);
+      this.productForm.controls['productName'].setValue(this.editData.productName);
       this.productForm.controls['category'].setValue(this.editData.category);
       this.productForm.controls['freshness'].setValue(this.editData.freshness);
       this.productForm.controls['price'].setValue(this.editData.price);
@@ -50,6 +51,7 @@ export class DialogComponent implements OnInit {
             next : (res) =>{alert("Product added sucessfully")
            this.productForm.reset(),
            this.dialogRef.close('save');
+           
           } ,
           
           error:()=>
