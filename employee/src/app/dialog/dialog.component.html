@@ -1,0 +1,56 @@
+<h1 mat-diaog-title>Add Employee Details </h1>
+<div mat-diaog-content>
+    <form [formGroup]="employeeForm">
+        <mat-form-field appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input formControlName="firstName" matInput placeholder="Placeholder">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input formControlName="lastName" matInput placeholder="Placeholder">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput placeholder="Placeholder">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Address </mat-label>
+            <input formControlName="address" matInput placeholder="Placeholder">
+          </mat-form-field>
+          
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Phone Number </mat-label>
+            <input formControlName="phoneNumber" matInput placeholder="Placeholder">
+          </mat-form-field>
+          
+            
+        
+
+          <mat-form-field appearance="fill">
+            <mat-label>Designation</mat-label>
+            <mat-select formControlName="designation"  placeholder="Select the Designation">
+            <mat-option value="Developer">Developer</mat-option>
+            <mat-option value="Tester">Tester</mat-option>
+            <mat-option value="Human Resource">Human Resource</mat-option>
+            <mat-option value="Manager">Manager</mat-option>
+        </mat-select> 
+          </mat-form-field>  
+
+          <mat-form-field appearance="fill">
+            <mat-label>Date of joining</mat-label>
+            <input formControlName="dateOfJoining" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> 
+
+  </form>
+</div>
+
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" (click)="addEmployee()">{{actionBtn}}</button>
+    <button style="margin-left:8px; " mat-raised-button color="warn"mat-dialog-close >Close</button>
+  </div>

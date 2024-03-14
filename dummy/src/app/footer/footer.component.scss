@@ -1,0 +1,54 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(230, 47, 15);
+    color: black;
+    padding: 10px 0;
+    
+  }
+  
+  .main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px; 
+  }
+  
+  .div1 {
+    display: flex;
+  }
+  
+  .div1 a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  
+  .div2 {
+    text-align: center; 
+  }
+  
+  .div2 p {
+    font-weight: 500;
+  }
+  
+  .div3 {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .div3 .a {
+    margin-left: 20px;
+  }
+  
+  .img {
+    border-radius: 10px;
+  }
+  
+  .span {
+    font-size: 17px;
+    font-weight: 500;
+  }

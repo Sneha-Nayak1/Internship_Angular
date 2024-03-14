@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
         this.getAllProducts();
       }
     })  }
+    
  getAllProducts(){
   this.api.getProduct().subscribe(
     {

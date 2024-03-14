@@ -11,8 +11,7 @@ import {NgForm} from '@angular/forms';
 
 export class AppComponent {
   
-
-
+  title = 'project';
 
 
   /* submit(data:NgForm){

@@ -1,0 +1,35 @@
+
+
+<!-- <h1>welcome {{name}}</h1>
+<button (click)="getName()">Update Name</button> -->
+
+<!-- <input type="text" [(ngModel)]="data">
+<h1>{{data}}</h1> -->
+
+<!-- <input type="text" #box1 (keyup)="getDetails(box1.value)">
+<h1>{{value}}</h1> -->
+
+<!-- <h1 *ngIf="show; then ifblock else elseblock"></h1>
+  <ng-template #ifblock>sneha</ng-template>
+  <ng-template #elseblock>raha</ng-template>
+
+  <ng-template [ngIf]="color==='red'"><p>red</p></ng-template>
+  <ng-template [ngif]="color==='blue'"><p>blue</p></ng-template> -->
+
+  <!-- <h1 *ngFor="let data of name">{{data}}</h1>
+
+  <h1 *ngFor="let data of details">
+    {{data.name}} and {{data.age}} and color is <p *ngFor="let val of data.color">{{val}}</p>
+  </h1> -->
+
+
+<form #box1="ngForm" (submit)="submit(box1.value)">
+  <input type="text" ngModel name="name">
+  <input type="text" ngModel name="num">
+  <input type="text" ngModel name="age">
+  <button>select </button>
+</form>
+
+<h1>{{data.name}}</h1>
+
+<router-outlet></router-outlet>
